@@ -5,6 +5,7 @@
    ============================================================ */
 
 :root {
+  color-scheme: only light;
   --paper: #F4F6F3;
   --paper-deep: #E9EDE7;
   --ink: #1C2440;
@@ -546,7 +547,7 @@ body[data-theme="tafel"] .concept-badge, body[data-theme="nacht"] .concept-badge
 .person__mono span:last-child { color: var(--ink); transform: translate(-6%, 7%) rotate(3deg); }
 .person__facts { display: grid; align-content: start; }
 .person__facts li {
-  display: grid; grid-template-columns: minmax(130px, 190px) 1fr;
+  display: grid; grid-template-columns: 190px 1fr;
   gap: 8px 26px;
   padding: clamp(18px, 2.6vh, 26px) 0;
   border-top: 1.5px solid var(--ink-35);
@@ -712,6 +713,8 @@ body[data-theme="tafel"] .concept-badge, body[data-theme="nacht"] .concept-badge
 }
 @media (max-width: 860px) {
   :root { --nav-h: 66px; }
+  .person__facts li { grid-template-columns: 1fr; gap: 4px; }
+  .person__facts strong { display: block; }
   .nav__links { display: none; }
   .nav__burger { display: block; }
   .hero__note { position: static; transform: rotate(2deg); margin-top: 26px; }
